@@ -1,5 +1,5 @@
 import React from "react";
-import sign from"../images/sign.svg";
+import sign from"../images/sign.png";
 
 function SignUp() {
     return(
@@ -27,7 +27,7 @@ function SignUp() {
                       <input type="text" placeholder="your names" required/>
                       <label for="name">Email</label>
                       <input type="email" placeholder="your email" required/>
-                      <label for="name">Name</label>
+                      <label for="name">Password</label>
                       <input type="password" placeholder="your password" required/>
                       <button type="submit">Sign Up</button>
                     </form>
