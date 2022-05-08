@@ -1,5 +1,5 @@
-/* File will contain styling for sign-in component */
-.signin {
+/* File will contain styling for sign-up component */
+.SignUp {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -9,16 +9,16 @@
     background: #F8F8F8;
 }
 
-.signin .signInForm .signinheader {
+.SignUp .signUpForm .signUpheader {
     padding: 25px 0;
 }
 
-.signin .signInForm .signinheader h2 {
+.SignUp .signUpForm .signUpheader h2 {
     font-size: 35px;
     margin: 10px 0;
 }
 
-.signin .signInForm .signinheader p {
+.SignUp .signUpForm .signUpheader p {
     font-size: 18px;
     margin: 10px 0;
 }
@@ -27,11 +27,11 @@
 
 /* styling for the image */
 
-.signin .leftSignIn {
+.SignUp .leftSignUp {
     width: 100%;
 }
 
-.signin .leftSignIn img {
+.SignUp .leftSignUp img {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
@@ -39,19 +39,19 @@
 
 /* styling for the form  */
 
-.signinForm {
+.signUpForm {
   width: 100%;
   padding:25px 0;
   background: #F8F8F8;
 }
 
-.signinForm form input {
+.signUpForm form input {
   width: 100%;
   margin: 15px 0;
   padding: 10px;
 }
 
-.signinForm form button {
+.signUpForm form button {
   padding: 10px;
   width: 100%;
   background-color: #6C63FF;
@@ -60,15 +60,5 @@
   outline: none;
   border-radius: 12px;
   transition: 0.5s;
-  margin: 5px 0;
 }
 
-.signInForm .google form button {
-  padding: 10px;
-  width: 100%;
-  color: #6C63FF;
-  text-align: center;
-  outline: none;
-  border: none;
-  transition: 0.5s;
-}
