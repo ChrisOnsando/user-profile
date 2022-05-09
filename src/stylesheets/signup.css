@@ -2,11 +2,8 @@
 .SignUp {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    margin: 10%;    
+    grid-template-columns: 1fr 2fr; 
     color: #6C63FF;
-    background: #F8F8F8;
 }
 
 .SignUp .signUpForm .signUpheader {
@@ -26,12 +23,11 @@
     text-align: center;
 }
 
-
-
 /* styling for the image */
 
 .SignUp .leftSignUp {
     width: 100%;
+    background: none;
 }
 
 .SignUp .leftSignUp img {
@@ -40,11 +36,13 @@
     object-fit: cover;
 }
 
+/* image styling ends here  */
+
 .SignUp .signupwith .google {
   display: inline-flex;
   text-align: center;
   margin-right: 80px;
-  border-style: solid #fff;
+  border-style:1px solid #fff;
   background: #F8F8F8;
 }
 
@@ -70,7 +68,7 @@
   height: 100vh;
 } 
 
-.form {
+.signUpForm .form {
   background-color: #E5E5E5;
   width: 400px;
   border-radius: 8px;
@@ -87,7 +85,6 @@
 
 .form input {
   position: absolute;
-  
   height: 100%;
   width: 100%;
   border: 1px solid #DADCE0;
@@ -95,9 +92,24 @@
   font-size: 16px;
   padding: 0 20px;
   outline: none;
-  background: none;
+  background: #FDFDFD80;
   z-index: 1;
 }
 
+.form button {
+  display: block;
+  padding: 15px 30px;
+  border: none;
+  background-color: #6C63FF;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+}
 
+.form .submitbutton {
+  background-color: #6C63FF;
+  transform: translateY(-2px);
+}
 
