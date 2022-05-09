@@ -13,8 +13,8 @@ function SignUp() {
                     <p>Already have an account? <a href="#">Sign In</a></p>
                 </div>
                 <div className="signupwith">
-                    <p>Sign up with Google</p>
-                    <p>Sign up with Facebook</p>
+                    <p className="google">Sign up with Google</p>
+                    <p className="facebook">Sign up with Facebook</p>
                 </div>
                 <div className="or">
                     <span></span>
