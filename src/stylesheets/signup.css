@@ -11,16 +11,19 @@
 
 .SignUp .signUpForm .signUpheader {
     padding: 25px 0;
+    text-align: center;
 }
 
 .SignUp .signUpForm .signUpheader h2 {
     font-size: 35px;
     margin: 10px 0;
+    text-align: center;
 }
 
 .SignUp .signUpForm .signUpheader p {
     font-size: 18px;
     margin: 10px 0;
+    text-align: center;
 }
 
 
@@ -37,28 +40,64 @@
     object-fit: cover;
 }
 
-/* styling for the form  */
-
-.signUpForm {
-  width: 100%;
-  padding:25px 0;
+.SignUp .signupwith .google {
+  display: inline-flex;
+  text-align: center;
+  margin-right: 80px;
+  border-style: solid #fff;
   background: #F8F8F8;
 }
 
-.signUpForm form input {
-  width: 100%;
-  margin: 15px 0;
-  padding: 10px;
+.SignUp .signupwith .facebook {
+  display: inline-flex;
+  text-align: center;
+  border-style:5px solid #fff;
+  background: #F8F8F8;
 }
 
-.signUpForm form button {
-  padding: 10px;
-  width: 100%;
-  background-color: #6C63FF;
-  color: #fff;
+.SignUp .or {
+  margin: 10px;
   text-align: center;
-  outline: none;
-  border-radius: 12px;
-  transition: 0.5s;
+
 }
+
+/* This section styles the form  */
+
+.signUpForm {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} 
+
+.form {
+  background-color: #E5E5E5;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+}
+
+.signUpForm .form input{
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+  background: #FDFDFD;
+}
+
+.form input {
+  position: absolute;
+  
+  height: 100%;
+  width: 100%;
+  border: 1px solid #DADCE0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+}
+
+
 
