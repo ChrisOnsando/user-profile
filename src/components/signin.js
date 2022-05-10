@@ -16,7 +16,7 @@ function Signin() {
                       <label for="password">Password</label>
                       <input type="password" placeholder="**********" required/>
                       <button type="submit">Sign In</button>
-                      <button type="submit">Sign In with Google</button>
+                      <button className="google" type="submit">Sign In with Google</button>
                     </form>
                     <p>Don't have an account yet? Sign up for free</p>
                 </div>
