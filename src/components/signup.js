@@ -22,6 +22,9 @@ function SignUp() {
             isLoggedIn: false,
         });
         addToLocalStorage();
+        setName('');
+        setEmail('');
+        setPwd('');
         console.log(newUser)
     }
 
