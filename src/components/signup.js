@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import sign from"../images/sign.png";
 
 function SignUp() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [pwd, setPwd] = useState('');
+
+    let newUser = [];
+
+    function addToLocalStorage() {
+        localStorage.setItem('Users', JSON.stringify(newUser));
+    }
+
+    function handleSignUp(e) {
+        e.preventDefault();
+        newUser.push({
+            userId: Math.floor(Math.random * 51),
+            name,
+            email,
+            pwd,
+            isLoggedIn: false,
+        });
+        addToLocalStorage();
+        setName('');
+        setEmail('');
+        setPwd('');
+        console.log(newUser)
+    }
+
     return(
         <div className="SignUp">
             <div className="leftSignUp">
@@ -22,13 +48,13 @@ function SignUp() {
                     <span></span>
                 </div>
                 <div className="signUpForm">
-                    <form className="form">
+                    <form onSubmit={handleSignUp} className="form">
                       <label for="name">Name</label>
-                      <input type="text" placeholder="your names" required/>
+                      <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="your names" required/>
                       <label for="name">Email</label>
-                      <input type="email" placeholder="your email" required/>
+                      <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="your email" required/>
                       <label for="name">Password</label>
-                      <input type="password" placeholder="your password" required/>
+                      <input value={pwd} onChange={(e) => setPwd(e.target.value)} type="password" placeholder="your password" required/>
                       <button type="submit">Sign Up</button>
                     </form>
                 </div>
