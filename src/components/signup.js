@@ -8,6 +8,10 @@ function SignUp() {
 
     let newUser = [];
 
+    function addToLocalStorage() {
+        localStorage.setItem('Users', JSON.stringify(newUser));
+    }
+
     function handleSignUp(e) {
         e.preventDefault();
         newUser.push({
@@ -17,6 +21,8 @@ function SignUp() {
             pwd,
             isLoggedIn: false,
         });
+        addToLocalStorage();
+        console.log(newUser)
     }
 
     return(
