@@ -5,8 +5,23 @@ function Signin() {
     const [email, setEmail] = useState('');
     const [pwd, setPwd] = useState('');
 
-    function handleSignIn() {
-        
+
+    function getFromLocalStorage() {
+        if(localStorage.getItem('Users')) {
+            return JSON.parse(localStorage.getItem('Users'));
+        }
+    }
+
+    function handleSignIn(e) {
+        e.preventDefault();
+        let myLocal = getFromLocalStorage();
+        myLocal.filter((user) => {
+            if(user.email === email && user.pwd === pwd) {
+                console.log('matched user!');
+            } else {
+                console.log('No user found!')
+            }
+        })
     }
 
     return(
@@ -19,7 +34,7 @@ function Signin() {
                 <div className="signinForm">
                     <form onSubmit={handleSignIn} className="form">
                       <label for="name">Email</label>
-                      <input value={name} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="your email" required/>
+                      <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="your email" required/>
                       <label for="password">Password</label>
                       <input value={pwd} onChange={(e) => setPwd(e.target.value)} type="password" placeholder="**********" required/>
                       <button type="submit">Sign In</button>
