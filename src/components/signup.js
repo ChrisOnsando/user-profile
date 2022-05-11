@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import sign from"../images/sign.png";
 
 function SignUp() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [pwd, setPwd] = useState('');
+    
     return(
         <div className="SignUp">
             <div className="leftSignUp">
