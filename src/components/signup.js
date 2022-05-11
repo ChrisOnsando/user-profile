@@ -5,7 +5,20 @@ function SignUp() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [pwd, setPwd] = useState('');
-    
+
+    let newUser = [];
+
+    function handleSignUp(e) {
+        e.preventDefault();
+        newUser.push({
+            userId: Math.floor(Math.random * 51),
+            name,
+            email,
+            pwd,
+            isLoggedIn: false,
+        });
+    }
+
     return(
         <div className="SignUp">
             <div className="leftSignUp">
