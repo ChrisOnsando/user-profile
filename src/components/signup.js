@@ -39,13 +39,13 @@ function SignUp() {
                     <span></span>
                 </div>
                 <div className="signUpForm">
-                    <form className="form">
+                    <form onSubmit={handleSignUp} className="form">
                       <label for="name">Name</label>
-                      <input type="text" placeholder="your names" required/>
+                      <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="your names" required/>
                       <label for="name">Email</label>
-                      <input type="email" placeholder="your email" required/>
+                      <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="your email" required/>
                       <label for="name">Password</label>
-                      <input type="password" placeholder="your password" required/>
+                      <input value={pwd} onChange={(e) => setPwd(e.target.value)} type="password" placeholder="your password" required/>
                       <button type="submit">Sign Up</button>
                     </form>
                 </div>
